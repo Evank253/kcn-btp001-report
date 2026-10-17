@@ -1,0 +1,1 @@
+open('/tmp/KCN_BTP001_Benchmark_Report.pdf','rb').read()
