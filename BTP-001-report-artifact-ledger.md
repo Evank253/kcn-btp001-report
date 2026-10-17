@@ -49,6 +49,8 @@ Format: PDF 1.7, 4 pages, A4, fonts embedded
 - MEASURED text comparison against Artifact 1: 776 words vs 763; word-sequence similarity 0.98; key figures (149, 0.895, AAA-plus, 0.98, 737, 17,964, 0.018, FED-010, PROPOSED, NOT_MEASURED) occur equally often in both. Of 19 differing spans, 15 were inspected (whitespace, one hyphenation break, bullet glyphs). 4 were not inspected.
 - Renders in Liberation Serif, not the declared Georgia.
 - REPORTED: another assistant confirmed the same size and digest from the transferred file.
+—-STATEMENTS
+This PDF was independently rendered, hashed, and committed by Claude, an AI agent, under Evan Ketchum's explicit direction. The report's content, structure, and underlying benchmark work are Evan Ketchum's. The rendering, verification, and push of this specific binary were performed independently by Claude as a third-party check against the source HTML.
 
 ## Rules
 
