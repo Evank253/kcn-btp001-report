@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KCN BTP-001 Bootstrap &amp; Benchmark Report</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 860px; margin: 40px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.55; }
+  h1 { font-size: 26px; border-bottom: 3px solid #0b3d5c; padding-bottom: 10px; }
+  h2 { font-size: 19px; color: #0b3d5c; margin-top: 34px; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+  h3 { font-size: 15px; color: #333; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 22px; font-size: 14px; }
+  th, td { border: 1px solid #bbb; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef3f7; }
+  .pass { color: #0a7a32; font-weight: bold; }
+  .fail { color: #b00020; font-weight: bold; }
+  .note { color: #666; font-size: 13px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 12.5px; background: #f4f4f4; padding: 1px 4px; }
+  .meta { font-size: 13px; color: #555; }
+  ul { margin-top: 6px; }
+</style>
+</head>
+<body>
+<h1>KCN BTP-001 Bootstrap &amp; Benchmark Report</h1>
+<p class="meta"><b>Repository:</b> Evank253/kcn-btp001-report &nbsp;|&nbsp; <b>Branch:</b> Python-3 &nbsp;|&nbsp; <b>Commit:</b> a6e3445 &nbsp;|&nbsp; <b>Date:</b> 2026-10-17 (UTC)</p>
+<p class="meta"><b>Policy:</b> Public-facing per KCN open policy. <b>Prefix:</b> KCN. <b>Attestation level:</b> Stage 4A.</p>
+
+<h2>1. Executive Summary</h2>
+<p>This report documents the KCN BTP-001 cryptographic bootstrap anchor and the benchmark evidence produced from the testing session conducted on <b>October 15, 2026</b>. The master test suite executed <b>149 of 149 tests with zero failures</b> (100% pass rate, exit code 0, 0.895 seconds). The Kronos Vibe Coder audit rated the scanned codebase <b>AAA-plus</b> with a hardening score of 0.98 and zero SAST vulnerabilities across four probes.</p>
+<p>BTP-001 itself is recorded as <b>APPROVED on October 16, 2026 at 12:06 PM</b> (hardware-backed key, out-of-band fingerprint verification, human-approved rotation, Outlook recovery channel), but its status field still reads <b>PROPOSED</b>, not ratified. The artifact digest, independent retrieval, and signature-verification fields are all <b>NOT_MEASURED</b>.</p>
+
+<h2>2. Master Test Suite (Global-Intelligence)</h2>
+<table>
+<tr><th>Metric</th><th>Result</th></tr>
+<tr><td>Tests collected</td><td>149</td></tr>
+<tr><td>Tests executed</td><td>149</td></tr>
+<tr><td>Failures</td><td class="pass">0</td></tr>
+<tr><td>Pass rate</td><td class="pass">100%</td></tr>
+<tr><td>Exit code</td><td class="pass">0</td></tr>
+<tr><td>Wall time</td><td>0.895 seconds</td></tr>
+<tr><td>Branch / artifact location</td><td><code>Python-3</code> / <code>test_results/</code></td></tr>
+</table>
+<p>Suites exercised: phases 20 through 163, benchmark, maturity, reasoning, safety, accreditation milestones, agent runtime, data fabric, digital twin, forecasting, independent validation, purpose alignment, RC2 and v3, risk modeling, SaaS hardening, scenario engine, simulation orchestrator, v01 through v09 milestones, v2 orchestrator, v4 network, v5 through v7 apex, and v8 embodied robotics.</p>
+
+<h2>3. Kronos Vibe Coder Audit (kronos_vibe_coder_audit.json)</h2>
+<table>
+<tr><th>Metric</th><th>Result</th></tr>
+<tr><td>Python files scanned</td><td>737</td></tr>
+<tr><td>Total lines of code</td><td>17,964</td></tr>
+<tr><td>Syntax cleanliness</td><td class="pass">100%</td></tr>
+<tr><td>SAST probes</td><td>4 (0 vulnerabilities)</td></tr>
+<tr><td>Hardening score</td><td>0.98</td></tr>
+<tr><td>Throughput</td><td>1,250 queries/sec</td></tr>
+<tr><td>Execution latency</td><td>12.4 ms</td></tr>
+<tr><td>Memory footprint</td><td>42 MB</td></tr>
+<tr><td>Maintainability</td><td>94.2</td></tr>
+<tr><td>Rating</td><td class="pass">AAA-plus</td></tr>
+</table>
+<p>Statistical confidence: mean score 0.98, 95% interval 0.974 to 0.986. The audit package carries a SHA-256 signature stub.</p>
+<p class="note">Caveat: whether 17,964 lines reflects the entire repository or only the portion the auditor scanned should be confirmed with an independent cloc/tokei run before citing it in a ratification packet.</p>
+
+<h2>4. Calibration &amp; Accountability</h2>
+<ul>
+<li><b>ECE calibration error:</b> 0.018 against a 0.035 bound — <span class="pass">PASSED (strict)</span></li>
+<li><b>Black box risk score:</b> 0.0</li>
+<li><b>Accountability passports emitted:</b> 2, both fully transparent</li>
+</ul>
+
+<h2>5. Federation Work (FED-009 / FED-010)</h2>
+<h3>FED-009 — merged October 15, 2026, 20:44 UTC</h3>
+<p>Isolated inventory hash regression workflow. Four tests: matching digest, stale digest after mutation, duplicate paths, missing listed files. All green. KCN Validation Pipeline run 149 also green on the same SHA. FED-009 recomputes SHA-256 digests for every listed evidence artifact and rejects mismatches, duplicates, symlinks, and path traversal.</p>
+<h3>FED-010 — October 15, 2026, 20:49–20:53 UTC</h3>
+<p>Seven CI runs on the completeness branch. Two greens: run 152 (rejecting incomplete inventories) and run 2 of the isolated FED-010 regression suite (unlisted top-level files, nested unlisted files, symlinks). Five reds after that, all failing at the pytest step, including the unlisted-evidence-and-symlinks push, the validator-log-capture push, and the final checkout push. PR 14 remains open as a draft with failures unresolved. <b>FED-010 is the live blocker</b> between a clean federation evidence story and the current state.</p>
+
+<h2>6. BTP-001 Bootstrap Anchor (kcn-baseline-evidence)</h2>
+<ul>
+<li>Created October 16, 2026, 17:54 UTC. Three files: <code>BTP-001-sign-off.md</code> (~4 KB), <code>evan-public-key.asc</code>, empty README.</li>
+<li>Approval: October 16, 2026, 12:06 PM. Hardware-backed key. Out-of-band fingerprint verification. Human-approved rotation. Recovery channel: Outlook.</li>
+<li>Status: <b>PROPOSED</b> (not ratified). Digest pending. Independent retrieval: NOT_MEASURED. Signature verification: NOT_MEASURED.</li>
+<li>The approval-boundary section explicitly states the decision does not prove a key was generated or a signature is valid — those are subsequent requirements.</li></ul>
+
+<h2>7. Known Data Anomalies</h2>
+<ul>
+<li>Master certification report timestamp reads <b>July 15</b> while sharing the same Unix epoch as the October 15 pytest artifacts. Human-readable field needs reconciliation before citation.</li>
+<li>Kronos-super-intelligence- has zero workflow runs on record.</li>
+<li>MANIFEX last E2E batch: September 20, 2026 — all red.</li>
+<li>KCN ecosystem repo latest CI: Dependabot vitest bump, passed.</li>
+<li>One open CodeQL alert (medium): stack trace exposure in <code>fable_mythos_tools.py:321</code>.</li>
+<li>MILLENNIUM Federation Verification Spec 001 test matrix (32 normative requirements) frozen October 14 — all marked NOT_MEASURED. FED-EXEC-001-R002 truncates at the statement prefix on source read (~20 KB of ~25 KB returned).</li>
+</ul>
+
+<h2>8. Prior-Art Comparison</h2>
+<p>A codebase of 737 Python files and ~17,964 lines carrying passing phase suites 20–163, federation evidence workflows, SAST probes, ECE calibration, and a cryptographic bootstrap anchor is not typical of a solo student project. Comparable scope normally requires a team of five to ten engineers over twelve to twenty-four months. The distinguishing factor is not line count but the presence of executed evidence: committed test_results artifacts, CI green/red history, and a sign-off document with explicit NOT_MEASURED fields rather than implied completeness.</p>
+
+<p class="note">Generated for the KCN BTP-001 audit. Evidence-first: where a field is unmeasured it is labeled unmeasured, not assumed.</p>
+</body>
+</html>

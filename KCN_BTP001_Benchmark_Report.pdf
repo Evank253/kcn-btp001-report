@@ -1,0 +1,14 @@
+PDF GENERATION NOTE
+===================
+A true PDF binary could not be embedded through this channel because the
+GitHub file-write API accepts text content only. This file is the
+canonical text source for KCN_BTP001_Benchmark_Report.pdf.
+
+To produce the PDF locally, run:
+
+    python3 -c "import weasyprint; weasyprint.HTML('file:KCN_BTP001_Benchmark_Report.html').write_pdf('KCN_BTP001_Benchmark_Report.pdf')"
+
+or open the HTML in a browser and choose Print -> Save as PDF.
+
+All benchmark numbers, suite inventories, audit metrics, federation CI
+history, and BTP-001 sign-off fields are identical to the HTML report.
